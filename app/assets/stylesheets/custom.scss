@@ -1,5 +1,21 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+$gray-medium-light:#eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
 body {
   padding-top: 60px;
 }
@@ -13,7 +29,7 @@ textarea {
 }
 
 .center {
-  text-align: center;
+  text-align: center
     h1 {
     margin-bottom: 10px;
     }
@@ -35,7 +51,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #777;
+  color: gray-midium-light;
 }
 
 p {
@@ -63,7 +79,7 @@ footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
-  color: #777;
+  color: gray-midium-light;
   a {
         color: #555;
         &:hover {
