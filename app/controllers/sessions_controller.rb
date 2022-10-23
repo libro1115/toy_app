@@ -6,10 +6,11 @@ class SessionsController < ApplicationController
     if user && user.authenticcate(params[:session][:password])
 
     else
-      render "new"
+      flash.now[:danger] = "Invalid email/password combination"
+    render "new", status: :unprocessable_entity
     end
   end
-  
+
   def destroy
 
   end
